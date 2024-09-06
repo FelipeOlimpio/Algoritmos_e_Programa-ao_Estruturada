@@ -1,0 +1,28 @@
+// questao17
+#include <stdio.h>
+
+int main() {
+    float valor, soma = 0, media;
+    int count = 0;
+    char opcao;
+
+    do {
+        printf("digite o valor da mercadoria: ");
+        scanf("%f", &valor);
+        soma += valor;
+        count++;
+
+        do {
+            printf("MAIS MERCADORIAS (S/N)? ");
+            scanf(" %c", &opcao);
+        } while (opcao != 'S' && opcao != 'N');
+
+    } while (opcao == 'S');
+
+    media = soma / count;
+
+    printf("valor total em estoque: %.2f\n", soma);
+    printf("media do valor das mercadorias: %.2f\n", media);
+
+    return 0;
+}

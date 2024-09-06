@@ -1,0 +1,23 @@
+// questao16
+#include <stdio.h>
+
+int main() {
+    int num_mercadorias;
+    float valor, soma = 0, media;
+
+    printf("digite o numero total de mercadorias: ");
+    scanf("%d", &num_mercadorias);
+
+    for (int i = 1; i <= num_mercadorias; i++) {
+        printf("digite o valor da mercadoria %d: ", i);
+        scanf("%f", &valor);
+        soma += valor;
+    }
+
+    media = soma / num_mercadorias;
+
+    printf("valor total em estoque: %.2f\n", soma);
+    printf("media do valor das mercadorias: %.2f\n", media);
+
+    return 0;
+}
