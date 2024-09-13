@@ -1,0 +1,15 @@
+// exercício1
+#include <stdio.h>
+		
+int menor(int num1, int num2) {
+    return (num1 < num2) ? num1 : num2;
+}
+
+int main() {
+    int a, b;
+    printf("digite dois numeros inteiros: ");
+    scanf("%d %d", &a, &b);
+    
+    printf("O menor numero e: %d\n", menor(a, b));
+    return 0;
+}

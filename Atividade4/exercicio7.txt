@@ -1,0 +1,22 @@
+// exercicio7
+
+#include <stdio.h>
+
+int ePar(int num) {
+    return (num % 2 == 0) ? 1 : 0;
+}
+
+int main() {
+    int num;
+    
+    printf("digite um numero inteiro: ");
+    scanf("%d", &num);
+    
+    if (ePar(num)) {
+        printf("O número %d é par.\n", num);
+    } else {
+        printf("O número %d é ímpar.\n", num);
+    }
+    
+    return 0;
+}

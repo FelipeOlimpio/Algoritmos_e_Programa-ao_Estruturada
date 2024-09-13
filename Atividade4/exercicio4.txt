@@ -1,0 +1,23 @@
+// exercicio4
+#include <stdio.h>
+
+int Absoluto(int num) {
+    return (num < 0) ? -num : num;
+}
+
+int main() {
+    int valores[5];
+    
+    printf("digite 5 valores inteiros:\n");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &valores[i]);
+    }
+    
+    printf("valores absolutos:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", Absoluto(valores[i]));
+    }
+
+    return 0;
+}
+

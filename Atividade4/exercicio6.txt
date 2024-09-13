@@ -1,0 +1,47 @@
+// exercicio6
+
+#include <stdio.h>
+
+float mediaAritmetica(float n1, float n2, float n3) {
+    return (n1 + n2 + n3) / 3.0;
+}
+
+float mediaPonderada(float n1, float n2, float n3) {
+    return (n1 * 5 + n2 * 3 + n3 * 2) / 10.0;
+}
+
+float mediaHarmonica(float n1, float n2, float n3) {
+    return 3.0 / ((1.0/n1) + (1.0/n2) + (1.0/n3));
+}
+
+float calcularMedia(float n1, float n2, float n3, char tipo) {
+    if (tipo == 'A') {
+        return mediaAritmetica(n1, n2, n3);
+    } else if (tipo == 'P') {
+        return mediaPonderada(n1, n2, n3);
+    } else if (tipo == 'H') {
+        return mediaHarmonica(n1, n2, n3);
+    } else {
+        printf("tipo de media invalido!\n");
+        return -1;
+    }
+}
+
+int main() {
+    float nota1, nota2, nota3;
+    char tipo;
+    
+    printf("digite as tres notas do aluno: ");
+    scanf("%f %f %f", &nota1, &nota2, &nota3);
+    
+    printf("digite o tipo de media (A para aritmetica, P para ponderada, H para harmonica): ");
+    scanf(" %c", &tipo);
+    
+    float resultado = calcularMedia(nota1, nota2, nota3, tipo);
+    if (resultado != -1) {
+        printf("a media calculada e: %.2f\n", resultado);
+    }
+
+    return 0;
+}
+
