@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int V1[15], V2[15];
+    int i, contador = 0;
+
+    
+    printf("digite os elementos do vetor V1:\n");
+    for (i = 0; i < 15; i++) {
+        printf("V1[%d]: ", i);
+        scanf("%d", &V1[i]);
+    }
+
+    
+    printf("digite os elementos do vetor V2:\n");
+    for (i = 0; i < 15; i++) {
+        printf("V2[%d]: ", i);
+        scanf("%d", &V2[i]);
+    }
+
+    
+    for (i = 0; i < 15; i++) {
+        if (V1[i] == V2[i]) {
+            contador++;
+        }
+    }
+
+    
+    printf("quantidade de números iguais nas mesmas posiçoes: %d\n", contador);
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int A[10], M[10], X;
+    int i;
+
+    
+    for (i = 0; i < 10; i++) {
+        printf("digite o elemento %d do vetor A: ", i + 1);
+        scanf("%d", &A[i]);
+    }
+
+    
+    printf("digite o valor de X: ");
+    scanf("%d", &X);
+
+    
+    for (i = 0; i < 10; i++) {
+        M[i] = A[i] * X;
+    }
+
+    
+    printf("vetor M resultante:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", M[i]);
+    }
+    printf("\n");
+
+    return 0;
+}

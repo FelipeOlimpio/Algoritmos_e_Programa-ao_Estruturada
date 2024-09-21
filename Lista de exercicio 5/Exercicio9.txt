@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+    int numeros[11], i, j, novoNumero, temp;
+
+   
+    for (i = 0; i < 10; i++) {
+        printf("digite o numero %d: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
+    
+    for (i = 0; i < 9; i++) {
+        for (j = i + 1; j < 10; j++) {
+            if (numeros[i] > numeros[j]) {
+                // Troca
+                temp = numeros[i];
+                numeros[i] = numeros[j];
+                numeros[j] = temp;
+            }
+        }
+    }
+
+    
+    printf("digite um novo numero para inserir no vetor: ");
+    scanf("%d", &novoNumero);
+
+    
+    for (i = 0; i < 10; i++) {
+        if (novoNumero < numeros[i]) {
+            
+            for (j = 10; j > i; j--) {
+                numeros[j] = numeros[j - 1];
+            }
+            numeros[i] = novoNumero;
+            break;
+        }
+    }
+
+    
+    if (i == 10) {
+        numeros[10] = novoNumero;
+    }
+
+    
+    printf("vetor atualizado com o novo número:\n");
+    for (i = 0; i < 11; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    return 0;
+}

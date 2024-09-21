@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[20], novoVetor[20], i, j = 0, numero;
+
+    
+    for (i = 0; i < 20; i++) {
+        printf("digite o numero %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    
+    printf("digite o numero que deseja verificar: ");
+    scanf("%d", &numero);
+
+    
+    for (i = 0; i < 20; i++) {
+        if (vetor[i] != numero) {
+            novoVetor[j] = vetor[i];
+            j++;
+        }
+    }
+
+   
+    printf("novo vetor sem o numero %d:\n", numero);
+    for (i = 0; i < j; i++) {
+        printf("%d ", novoVetor[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
