@@ -1,0 +1,32 @@
+// 2 - c
+
+#include <stdio.h>
+#include <string.h>
+
+int calcularTamanho(char str[]) {
+    int i = 0;
+    while (str[i] != '\0') {
+        i++;
+    }
+    return i;
+}
+
+int main() {
+    char str[100];
+    printf("Digite uma string: ");
+    scanf("%99s", str);
+
+    int tamanhoComStrlen = strlen(str);
+    int tamanhoSemStrlen = calcularTamanho(str);
+
+    printf("Tamanho com strlen: %d\n", tamanhoComStrlen);
+    printf("Tamanho sem strlen: %d\n", tamanhoSemStrlen);
+
+    if (tamanhoComStrlen == tamanhoSemStrlen) {
+        printf("Os resultados sao iguais.\n");
+    } else {
+        printf("Os resultados sao diferentes.\n");
+    }
+
+    return 0;
+}

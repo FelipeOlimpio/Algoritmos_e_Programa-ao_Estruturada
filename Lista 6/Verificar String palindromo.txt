@@ -1,0 +1,33 @@
+// Verificar se a string é um palíndromo 
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int ehPalindromo(char str[]) {
+    int i = 0, j = strlen(str) - 1;
+    while (i < j) {
+        if (isspace(str[i])) { i++; continue; }
+        if (isspace(str[j])) { j--; continue; }
+        if (tolower(str[i]) != tolower(str[j])) {
+            return 0;
+        }
+        i++;
+        j--;
+    }
+    return 1;
+}
+
+int main() {
+    char str[100];
+    printf("Digite uma string: ");
+    fgets(str, 100, stdin);
+
+    if (ehPalindromo(str)) {
+        printf("A string e um palindromo.\n");
+    } else {
+        printf("A string nao e um palindromo.\n");
+    }
+
+    return 0;
+}
